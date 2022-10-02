@@ -12,7 +12,9 @@ const ContinentsDropdown = ({ continents }: NavProps): JSX.Element => {
   return (
     <NavDropdown title="Continents" id="basic-nav-dropdown">
       {continents.map((continent) => (
-        <NavDropdown.Item href={`/${continent}`}>{continent}</NavDropdown.Item>
+        <NavDropdown.Item key={continent} href={`/${continent}`}>
+          {continent}
+        </NavDropdown.Item>
       ))}
     </NavDropdown>
   );
