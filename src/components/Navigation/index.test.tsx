@@ -13,12 +13,12 @@ describe('Navigation', () => {
     expect(title).toBeInTheDocument();
   });
 
-  it('includes all the require menu items', () => {
+  it('includes all the required high level menu items', () => {
     setup();
     const globalLink = screen.getByText(/global/i);
     const continents = screen.getByText(/continents/i);
     const countries = screen.getByText(/countries/i);
-    const usStates = screen.getByText('US States');
+    const usStates = screen.getByText(/us states/i);
     const about = screen.getByText(/about/i);
     const refresh = screen.getByText(/refresh/i);
 
