@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Navigation from './index';
-import { CONTINENTS } from '../../utilities/continents';
+import { CONTINENTS } from '../../utilities';
 
 const setup = () => {
   render(<Navigation continents={CONTINENTS} />);

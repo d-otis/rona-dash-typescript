@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navigation from './components/Navigation';
-import { CONTINENTS } from './utilities/continents';
+import { CONTINENTS } from './utilities';
 
 function App() {
   return <Navigation continents={CONTINENTS} />;

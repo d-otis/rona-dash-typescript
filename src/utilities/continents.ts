@@ -8,4 +8,4 @@ const CONTINENTS: string[] = [
   'Oceania',
 ];
 
-export { CONTINENTS };
+export default CONTINENTS;
