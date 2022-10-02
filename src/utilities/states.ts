@@ -1,0 +1,36 @@
+const statePlaceholderData: object[] = [
+  {
+    FIPS: null,
+    Admin2: null,
+    Province_State: 'Los Lagos',
+    Country_Region: 'Chile',
+    Last_Update: '2021-01-02 05:22:33',
+    Lat: -41.9198,
+    Long_: -72.1416,
+    Confirmed: 26170,
+    Deaths: 263,
+    Recovered: 24352,
+    Active: 1555,
+    Combined_Key: 'Los Lagos, Chile',
+    Incident_Rate: 3157.9277622516015,
+    Case_Fatality_Ratio: 1.0049675200611388,
+  },
+  {
+    FIPS: null,
+    Admin2: null,
+    Province_State: 'Chongqing',
+    Country_Region: 'China',
+    Last_Update: '2021-01-02 05:22:33',
+    Lat: 30.0572,
+    Long_: 107.874,
+    Confirmed: 590,
+    Deaths: 6,
+    Recovered: 584,
+    Active: 0,
+    Combined_Key: 'Chongqing, China',
+    Incident_Rate: 1.8406347831493566,
+    Case_Fatality_Ratio: 1.0169491525423728,
+  },
+];
+
+export { statePlaceholderData };
