@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-bootstrap": "^0.32.30"
+    "@types/react-bootstrap": "^0.32.30",
+    "prettier": "2.7.1"
   }
 }
