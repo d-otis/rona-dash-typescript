@@ -4,31 +4,34 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const Navigation = () => {
+interface NavProps {
+  continents: string[];
+}
+
+const ContinentsDropdown = ({ continents }: NavProps): JSX.Element => {
+  return (
+    <NavDropdown title="Continents" id="basic-nav-dropdown">
+      {continents.map((continent) => (
+        <NavDropdown.Item href={`/${continent}`}>{continent}</NavDropdown.Item>
+      ))}
+    </NavDropdown>
+  );
+};
+
+const Navigation = ({ continents }: NavProps): JSX.Element => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Rona Dash</Navbar.Brand>
+        <Navbar.Brand href="/">Rona Dash</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Global</Nav.Link>
-            <Nav.Link href="#link">Continents</Nav.Link>
+            <ContinentsDropdown continents={continents} />
             <Nav.Link href="#link">Countries</Nav.Link>
             <Nav.Link href="#link">US States</Nav.Link>
             <Nav.Link href="#link">About</Nav.Link>
             <Nav.Link href="#link">Refresh</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>

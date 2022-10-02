@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import Navigation from './index';
+import { CONTINENTS } from '../../utilities/continents';
 
 const setup = () => {
-  render(<Navigation />);
+  render(<Navigation continents={CONTINENTS} />);
 };
 
 describe('Navigation', () => {
