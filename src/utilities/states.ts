@@ -21,7 +21,7 @@ interface StatePlaceholder {
   ISO3?: string;
 }
 
-const statePlaceholderData: StatePlaceholder[] = [
+const statePlaceholderData = [
   {
     Province_State: 'Alabama',
     Country_Region: 'US',
@@ -1184,4 +1184,23 @@ const statePlaceholderData: StatePlaceholder[] = [
   },
 ];
 
-export { statePlaceholderData };
+interface column {
+  name: string;
+}
+
+const stateColumns: column[] = [
+  {
+    name: 'State',
+  },
+  {
+    name: 'Last Update',
+  },
+  {
+    name: 'Confirmed',
+  },
+  {
+    name: 'Deaths',
+  },
+];
+
+export { statePlaceholderData, stateColumns };
