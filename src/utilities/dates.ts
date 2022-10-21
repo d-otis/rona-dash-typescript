@@ -3,7 +3,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat';
 dayjs.extend(customParseFormat);
 
 export const currentDate = (): string => {
-  return new Date().toLocaleString('en-US').replaceAll('/', '-').split(',')[0];
+  return dayjs().format('MM-DD-YYYY');
 };
 
 export const rewindDate = (date: string): string => {
