@@ -1,7 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import { StatesTable } from '.';
+import { statePlaceholderData } from '../../utilities/states';
 
 const setup = () => {
+  // render(<StatesTable data={statePlaceholderData} />);
   render(<StatesTable />);
 };
 
@@ -15,10 +17,18 @@ describe('StatesTable', () => {
   it('has the required columns', () => {
     setup();
 
-    const stateNameColumn = screen.getByText(/state/i);
-    const lastUpdateColumn = screen.getByText(/last update/i);
-    const confirmedColumn = screen.getByText(/confirmed/i);
-    const deathColumn = screen.getByText(/death/i);
+    const stateNameColumn = screen.getByRole('columnheader', {
+      name: /state/i,
+    });
+    const lastUpdateColumn = screen.getByRole('columnheader', {
+      name: /last update/i,
+    });
+    const confirmedColumn = screen.getByRole('columnheader', {
+      name: /confirmed/i,
+    });
+    const deathColumn = screen.getByRole('columnheader', {
+      name: /deaths/i,
+    });
 
     expect(stateNameColumn).toBeInTheDocument();
     expect(lastUpdateColumn).toBeInTheDocument();

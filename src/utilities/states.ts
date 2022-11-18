@@ -1,4 +1,4 @@
-interface StatePlaceholder {
+export type State = {
   FIPS: number | null;
   Admin2?: string | null;
   Province_State: string;
@@ -19,9 +19,9 @@ interface StatePlaceholder {
   Hospitalization_Rate: number | null;
   UID?: number;
   ISO3?: string;
-}
+};
 
-const statePlaceholderData = [
+export const statePlaceholderData: State[] = [
   {
     Province_State: 'Alabama',
     Country_Region: 'US',
@@ -1188,7 +1188,7 @@ interface column {
   name: string;
 }
 
-const stateColumns: column[] = [
+export const stateColumns: column[] = [
   {
     name: 'State',
   },
@@ -1202,5 +1202,3 @@ const stateColumns: column[] = [
     name: 'Deaths',
   },
 ];
-
-export { statePlaceholderData, stateColumns };
